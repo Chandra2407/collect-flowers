@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+.parent-game-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr 2fr;
+    width: 80vw;
+    height: 95vh;
+    max-width: 1000px;
+    border:2px solid #000;
+    border-radius: 20px;
+    background-color: rgb(152, 93, 17);
+    overflow: hidden;
+}
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+    background-color: rgb(152, 93, 17);
+    padding: 0px 120px;
+}
+
+.ground {
+    width: 150px;
+    height: 50px;
+    background-image: url('ground.png');
+    background-size: cover;
+    background-position: bottom right;
+    box-shadow: 0 0 10px 0 rgba(155, 19, 19, 0.5);
+    border-radius: 50%;
+    animation: randomMove 2s infinite;
+    position: relative;
+}
+.mole {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation: spawnMole infinite; /* Start with 1.2s */
+}
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    color: ghostwhite;
+    font-family: "Playwrite AU SA", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+@media screen and (max-width: 800px) {
+    .parent-game-container {
+        width: 90vw;
+        height: 99vh;
+    }
+    .game-container {
+        padding: 0px 20px;
+    }
+    .ground {
+        width: 120px;
+        height: 30px;
+    }
+    .mole {
+        width: 70px;
+        height: 70px;
+    }
+    header {
+        font-size: 10px;
+    }
+}
+
+@keyframes spawnMole {
+     0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
