@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function spawnMole() {
       currentGround = getRandomGround();
       let rect = grounds[currentGround].getBoundingClientRect();
-        mole.style.top = `${rect.top + -50}px`;
+        mole.style.top = `${rect.top + -60}px`;
         mole.style.left = `${rect.left + 30}px`;
         let randomImage = Math.floor(Math.random() * 10);
         mole.setAttribute('src', `flowers/${randomImage}.png`);
