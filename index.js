@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let rect = grounds[currentGround].getBoundingClientRect();
         mole.style.top = `${rect.top + -60}px`;
         mole.style.left = `${rect.left + 30}px`;
-        let randomImage = Math.floor(Math.random() * 10);
+        let randomImage = Math.floor(Math.random() * 11);
         mole.setAttribute('src', `flowers/${randomImage}.png`);
         mole.style.display = 'block';
         mole.style.animationDuration = `${spawnInterval / 1000}s`;
