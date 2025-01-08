@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     let score = 0;
     const mole = document.querySelector('.mole');
+    mole.style.display = 'none';
     const grounds = document.querySelectorAll('.ground');
     let currentGround = Math.floor(Math.random() * grounds.length);
     let spawnInterval = 1200; // Start with 1.2 seconds
